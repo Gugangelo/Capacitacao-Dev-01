@@ -1,0 +1,1 @@
+https://github.com/rocketseat-education/nlw-return-impulse/blob/aula03/server/prisma/schema.prisma

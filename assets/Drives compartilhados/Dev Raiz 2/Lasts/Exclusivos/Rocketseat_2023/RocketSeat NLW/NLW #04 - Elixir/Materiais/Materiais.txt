@@ -1,0 +1,3 @@
+https://github.com/rocketseat-education/nlw-04-elixir
+
+https://efficient-sloth-d85.notion.site/Configura-es-do-ambiente-Elixir-f823443de76840cbbcb8ab1db8aa4667

@@ -1,3 +1,0 @@
-https://github.com/rocketseat-education/nlw-04-nodejs
-
-https://efficient-sloth-d85.notion.site/Configura-es-do-ambiente-Node-js-ae9fea3f78894139af4268d198294e2a

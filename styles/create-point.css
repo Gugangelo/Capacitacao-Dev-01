@@ -1,0 +1,120 @@
+#page-create-point {
+    width: 90%; /* Largura normal de 90% mas */
+    max-width: 1100px; /* se chegar a 1100px ele não aumenta mais. */
+
+    margin: 0 auto; /* Em cima e embaixo é 0 mas nas laterais o espaço é preenchido automaticamente */
+}
+
+#page-create-point header {
+    margin-top: 48px;
+
+    display: flex;
+    justify-content: space-between; /* Basicamente, no caso de 2 elementos, joga 1 elemento pra um lado, colocar um espação no meio, e colocar o outro elemento do lado oposto. */
+    align-items: center;
+}
+
+#page-create-point header a {
+    color: var(--title-color);
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+}
+
+#page-create-point header a span {
+    background-image: url('/assets/arrow-left.svg');
+    width: 20px;
+    height: 24px;
+    margin-right: 12px;
+
+    display: flex;
+}
+
+form {
+    margin: auto; /* Alinhamento de caixas pelo lado de fora, display flex faz pelo lado de dentro */
+    margin-top: 80px;
+    background-color: white;
+    max-width: 760px;
+    padding: 64px;
+
+    /* margin -> outline -> border -> padding*/
+    box-sizing: border-box; /* O padrão é box-sizing, quando muda pra border-box o padding vai preencher só até o limite definido da caixa, sendo o border o definidor de largura máxima */
+    border-radius: 8px;
+}
+
+form h1 {
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+
+    border: 0;
+}
+
+form legend {
+    margin-bottom: 40px;
+}
+
+form legend h2 {
+    font-size: 24px;
+}
+
+form .field {
+    margin-bottom: 24px;
+    
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* O elementos passam a se estrturar como colunas ao invés do padrão de ficar um do lado do outro */
+}
+
+form .field-group {
+    display: flex;
+}
+
+form input, form select {
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 8px;
+    /* outline: none; Faz com que a linha preta da hora de clicar no campo pra digitar não apareça */
+}
+
+form select {
+    -webkit-appearance: none; /* Esses atributos assim fazem com que suma as características visuais padrão do campo select, tipo aquela seta pra baixo do lado */
+    -moz-appearance: none; /* No chrome pode dar alguns problemas de ele não aplicar os estilos definidos para o campo select */
+    appearance: none;  /* Assim esses atributos none servem pra resetar as coisas que o browser tinha posto */
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field { /* Dentro do form fieldgroup vai pegar um field seguido de outro field */
+    margin-left: 24px; /* O estilo está sendo aplicado no 2° field */
+} /* Ex: Aplicando o CSS no campo cidade, o qual tá vindo após o campo estado */
+
+form button {
+    width: 260px;
+    height: 56px;
+
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    border: 0;
+
+    margin-top: 40px;
+
+    transition: background-color 200ms; /* Faz a transição de cor só do background */
+}
+
+form button:hover {
+    background-color: #2FB86E;
+}

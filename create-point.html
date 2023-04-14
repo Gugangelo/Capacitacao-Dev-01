@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Criar um ponto de coleta</title>
+
+    <link rel="stylesheet" href="styles/main.css"> <!-- A ordem que os documentos de CSS são linkados é importante -->
+    <link rel="stylesheet" href="styles/create-point.css"> <!-- Primeiro ele puxa o CSS do arquivo acima, depois o daqui, depois o abaixo -->
+    <link rel="stylesheet" href="styles/responsive.css"> <!-- Esse documento funciona com base no que tem nos padrões do main -->
+</head>
+
+
+<body>
+    <div id="page-create-point">
+            
+        <header>
+                <img src="/assets/logo.svg" alt="Logomarca">
+                <a href="">
+                    <span></span>
+                    Voltar para home
+                </a>
+            </header>
+            
+            <form action="POST">
+                <h1>Cadastro do ponto de coleta</h1>
+
+                <fieldset>
+
+                    <legend><h2>Dados da entidade</h2></legend>
+
+                    <div class="field">
+                        <label for="name">Nome da entidade</label>
+                        <input type="text" name="name">
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="adress">Endereço</label>
+                            <input type="text" name="adress">
+                        </div>
+                        <div class="field">
+                            <label for="adress2">Número/Complemento</label>
+                            <input type="text" name="adress2">
+                        </div>
+                    </div>
+                    
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="state">Estado</label>
+                            <select name="state" id="">
+                                <option value="">Selecion o Estado</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="city">Cidade</label>
+                            <select name="city" id="" disabled>
+                                <option value="">Selecione a Cidade</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend><h2>Itens de coleta</h2></legend>
+                </fieldset>
+
+                <button type="submit">Cadastrar ponto de coleta</button>
+                
+            </form>
+
+    </div>
+</body>
+
+</html>

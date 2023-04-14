@@ -3,7 +3,7 @@
 #page-home {
     height: 100vh; /* Altura dinâmica */
 
-    background: url('/assets/home-background.svg') no-repeat;
+    background: url('../assets/home-background.svg') no-repeat;
     background-position: 35vw bottom;
 }
 
@@ -18,7 +18,7 @@
 }
 
 #page-home header {
-    margin-top: 16px;
+    margin-top: 48px;
 
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@
     margin-right: 16px;
     display: flex;
 
-    background-image: url('/assets/log-in.svg');
+    background-image: url('../assets/log-in.svg');
 
     width: 20px;
     height: 20px;
@@ -55,7 +55,7 @@
 }
 
 #page-home main p {
-    font-size: 54px;
+    font-size: 24px;
     line-height: 38px;
     margin-top: 24px;
 }
@@ -65,11 +65,13 @@
     height: 72px;
     max-width: 360px;
     margin-top: 40px;
-
     border-radius: 8px;
+
     background: var(--primary-color);
     align-items: center;
     display: flex;
+
+    transition: 400ms;
     /* font-weight: bold; */
 }
 
@@ -81,9 +83,9 @@
     width: 72px;
     height: 72px;
     
-    background-color: rgba(0, 0, 0, 0.08); /* Alpha é o 4° componente, é a transparência */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.08); /* Alpha é o 4° componente, é a transparência */
 
     display: flex;
     align-items: center;
@@ -91,14 +93,14 @@
 }
 
 #page-home main a span::after {
-    content: '';
+    content: "";
     background-image: url('../assets/search.svg');
 
     width: 20px; /* Um span precisa de alguma altura e largura para que a imagem apareça */
     height: 20px;
 }
 
-#page-home main a span strong {
+#page-home main a strong {
     flex: 1;
     color: white;
     text-align: center;

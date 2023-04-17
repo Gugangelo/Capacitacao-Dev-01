@@ -25,7 +25,7 @@
                 </a>
             </header>
             
-            <form action="POST">
+            <form action="">
                 <h1>Cadastro do ponto de coleta</h1>
 
                 <fieldset>
@@ -34,30 +34,32 @@
 
                     <div class="field">
                         <label for="name">Nome da entidade</label>
-                        <input type="text" name="name">
+                        <input type="text" name="name" required>
                     </div>
 
                     <div class="field-group">
                         <div class="field">
                             <label for="adress">Endereço</label>
-                            <input type="text" name="adress">
+                            <input type="text" name="adress" required>
                         </div>
                         <div class="field">
                             <label for="adress2">Número/Complemento</label>
-                            <input type="text" name="adress2">
+                            <input type="text" name="adress2" required>
                         </div>
                     </div>
                     
                     <div class="field-group">
                         <div class="field">
-                            <label for="state">Estado</label>
-                            <select name="state" id="">
-                                <option value="">Selecion o Estado</option>
+                            <label for="uf">Estado</label>
+                            <select name="uf" id="" required>
+                                <option value="">Selecione o Estado</option>
                             </select>
+
+                            <input type="hidden" name="state"> <!--O valor desse campo vai receber o nome do estado -->
                         </div>
                         <div class="field">
                             <label for="city">Cidade</label>
-                            <select name="city" id="" disabled>
+                            <select name="city" id="" disabled required>
                                 <option value="">Selecione a Cidade</option>
                             </select>
                         </div>
@@ -67,6 +69,40 @@
 
                 <fieldset>
                     <legend><h2>Itens de coleta</h2></legend>
+
+                    <div class="items-grid">
+                        <li data-id="1">
+                            <img src="/assets/lampadas.svg" alt="Lâmpadas">
+                            <span>Lâmpadas</span>
+                        </li>
+                        
+                        <li data-id="2">
+                            <img src="/assets/baterias.svg" alt="Pilhas e Baterias">
+                            <span>Pilhas e Baterias</span>
+                        </li>
+
+                        <li data-id="3">
+                            <img src="/assets/papeis-papelao.svg" alt="Papéis e Papelão">
+                            <span>Papéis e Papelão</span>
+                        </li>
+
+                        <li data-id="4">
+                            <img src="/assets/eletronicos.svg" alt="Resíduos Eletrônico">
+                            <span>Resíduos Eletrônico</span>
+                        </li>
+
+                        <li data-id="5">
+                            <img src="/assets/organicos.svg" alt="Resíduos Orgânicos">
+                            <span>Resíduos Orgânicos</span>
+                        </li>
+
+                        <li data-id="6">
+                            <img src="/assets/oleo.svg" alt="Óleo de cozinha">
+                            <span>Óleo de cozinha</span>
+                        </li>
+                    </div>
+
+                    <input type="hidden" name="items">
                 </fieldset>
 
                 <button type="submit">Cadastrar ponto de coleta</button>
@@ -74,6 +110,8 @@
             </form>
 
     </div>
+
+    <script src="/scripts/create-point.js"></script>
 </body>
 
 </html>

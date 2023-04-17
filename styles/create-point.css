@@ -31,8 +31,7 @@
 }
 
 form {
-    margin: auto; /* Alinhamento de caixas pelo lado de fora, display flex faz pelo lado de dentro */
-    margin-top: 80px;
+    margin: 80px auto; /* Alinhamento de caixas pelo lado de fora, display flex faz pelo lado de dentro */
     background-color: white;
     max-width: 760px;
     padding: 64px;
@@ -117,4 +116,50 @@ form button {
 
 form button:hover {
     background-color: #2FB86E;
+}
+
+/* 2° fieldset: Itens de Coleta */
+
+.items-grid {
+    display: grid; /* Enquanto o flex é mais unidimensional, o grid trabalha melhor algo mais próximo de matrizes, linhas e colunas */
+    /* grid-template-columns: 200px 200px 200px; Cria 3 colunas de 200px */
+    grid-template-columns: 1fr 1fr 1fr; /* O fr é uma unidade de tamanho flexível que vai calcular sozinho como encaixar x colunas nesse espaço */
+    gap: 16px; /* Menos complexo que o margin para separar os elementos */
+}
+
+.items-grid li {
+    height: 120px;
+    border: 2px solid #f0f0f5;
+    border-radius: 8px;
+    padding: 32px 24px 16px;
+    background-color: #f0f0f5;
+
+    list-style: none;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Se comporta diferentemente de acordo com o flex-direction */
+
+    cursor: pointer;
+}
+
+.items-grid li span {
+    margin-top: 12px;
+    
+    flex: 1; /* Faz com que o restante do espaço após a imagem seja para este elemento */
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+}
+
+.items-grid li.selected {
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img, .items-grid li span {
+    pointer-events: none; /* Pra ajudar no event listener do JS */
 }

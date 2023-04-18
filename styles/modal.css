@@ -22,11 +22,12 @@
     color: white;
 }
 
-#modal .content {
+/* #modal .content {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
+
 #modal .header {
     display: flex;
     align-items: center;
